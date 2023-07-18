@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo h1 {
+    font-size: 2rem;
+
+}
+.nav_Container{
+position: sticky;
+top:0;
+z-index: 2;
+
+
+
+}
+
+.nav_Body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: BLUE;
+    color: white;
+  
+}
+
+.list ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.cart {
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.hamburger {
+    display: none;
+}

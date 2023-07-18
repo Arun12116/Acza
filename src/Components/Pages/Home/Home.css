@@ -1,0 +1,27 @@
+.home_container {
+    background-color: black;
+}
+
+.home_container p {
+
+    color: rgb(221, 218, 224);
+    font-size: 20px;
+    margin-top: 1rem;
+
+}
+
+.home_container h1 {
+    color: rgb(212, 44, 44);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.home_container button {
+    width: 9vw;
+    height: 7vh;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: aquamarine;
+    cursor: pointer;
+}
