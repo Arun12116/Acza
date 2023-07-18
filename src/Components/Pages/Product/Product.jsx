@@ -75,8 +75,8 @@ const Product = () => {
                       direction={{ base: 'column', sm: 'row' }}
                       overflow='hidden'
                       variant='outline'
-                      width={"35vw"}
-                      height={"50vh"}
+                   width={"40vw"}
+                   height={"50vh"}
                     >
                       <Image
                         objectFit='cover'
@@ -98,7 +98,6 @@ const Product = () => {
                           }</Heading>
 
                         </CardBody>
-
                         <CardFooter>
                           <Button variant='solid' colorScheme='green' onClick={() => addItems(items)}>
                             AddToCart
