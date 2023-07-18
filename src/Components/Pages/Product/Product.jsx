@@ -90,11 +90,11 @@ const Product = () => {
 
                       <Stack ml={5}>
                         <CardBody my={5}>
-                          <Heading size='md'>{items.category
+                          <Heading size='sm'>{items.category
                           }</Heading>
-                          <Heading size='md'>${items.price
+                          <Heading size='sm'>${items.price
                           }</Heading>
-                          <Heading size='md'>${items.title
+                          <Heading size='sm'>${items.title
                           }</Heading>
 
                         </CardBody>
