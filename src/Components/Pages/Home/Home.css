@@ -1,11 +1,14 @@
 .home_container {
+    width: 100%;
+    height: 100vh;
+
     /* background-color: black; */
 }
 
 .home_container p {
 
     color: rgb(221, 218, 224);
-    font-size: 20px;
+    font-size: 1vw;
     margin-top: 1rem;
 
 }
@@ -13,7 +16,7 @@
 .home_container h1 {
     color: rgb(212, 44, 44);
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 3vw;
 }
 
 .home_container button {
@@ -25,3 +28,11 @@
     background-color: aquamarine;
     cursor: pointer;
 }
+/* .heading-main{
+    width: 50vw;
+    height: 50vh;
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+} */

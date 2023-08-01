@@ -20,6 +20,8 @@ const Navbar = () => {
                     <div className="logo">
                         <h1>Geeks-Store</h1>
                     </div>
+
+
                     <div className="list">
                         <ul>
                             <Link style={{ color: "white", textDecoration: "none" }} to={"/Home"}>HOME</Link>
@@ -28,48 +30,49 @@ const Navbar = () => {
                         </ul>
 
                     </div>
-
                     <div className="cart">
                         <div>
                             <Link to={"/Login"}>
                                 {<BiUser style={{ color: "white" }} />}
                             </Link>
-
                         </div>
-                        <div style={{ display: "flex", }}>
 
-                            <div>
-                                <Link to={"/Cart"} style={{ color: "white" }}>
-
-
-                                    {<BsCartDash />}
-                                </Link>
-                            </div>
+                        <div>
+                            <Link to={"/Cart"} style={{ color: "white" }}>
 
 
-                            <div style={{ marginLeft: "0.25rem", white: "red", width: "35px", height: "35px", backgroundColor: "red", textAlign: "center", borderRadius: "50%", display: "flex", justifyContent: "center",fontSize:"22px" }}>
-                             <p>  {lengthOfCart.addToCart.length}</p> 
-
-                            </div>
-                            <div>
-
+                                {<BsCartDash />}
+                            </Link>
+                        </div>
+                        <div>
+                            <div className='count'>
+                                <p>  {lengthOfCart.addToCart.length}</p>
 
                             </div>
                         </div>
+                        <div>
+                            <div className="hamburger">
 
-
-
+                                {<GiHamburgerMenu />}
+                            </div>
+                        </div>
 
                     </div>
-                    <div className="hamburger">
-
-                        {<GiHamburgerMenu />}
-                    </div>
-
 
                 </div>
 
+
+
+
+
             </div>
+
+
+
+
+
+
+
         </>
     )
 }

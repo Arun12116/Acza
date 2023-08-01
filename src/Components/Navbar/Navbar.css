@@ -5,15 +5,14 @@
 }
 
 .logo h1 {
-    font-size: 2rem;
+    font-size: 3vw;
 
 }
-.nav_Container{
-position: sticky;
-top:0;
-z-index: 2;
 
-
+.nav_Container {
+    position: sticky;
+    top: 0;
+    z-index: 2;
 
 }
 
@@ -21,17 +20,18 @@ z-index: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     height: 10vh;
     background-color: BLUE;
     color: white;
-  
+
 }
 
 .list ul {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     list-style: none;
-    font-weight: bold;
+    font-size: 1.5vw;
     cursor: pointer;
 
 }
@@ -40,10 +40,55 @@ z-index: 2;
     font-size: 2rem;
     cursor: pointer;
     display: flex;
-    gap: 1rem;
+    gap: 1vw;
 
+
+}
+
+.count {
+    margin-left: 0.25rem;
+    color: white;
+    width: 3vw;
+    height: 40px;
+    background-color: red;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.60rem
 }
 
 .hamburger {
     display: none;
+}
+
+@media (max-width:320px) {
+    .list ul {
+        font-size: 3vw;
+        display: none;
+
+    }
+
+    .cart {
+        font-size: 1rem;
+        /* margin-top: 20px; */
+
+    }
+
+    .count {
+        margin-left: 0.25rem;
+        color: white;
+        width: 5vw;
+        height: 20px;
+        background-color: red;
+        text-align: center;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        font-size: 0.80rem
+    }
+    .hamburger {
+        display: block;
+    }
+
 }
