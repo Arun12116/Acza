@@ -34,7 +34,7 @@
 .btn {
   display: flex;
 }
-
+/* 
 @media (max-width:1440px) {
   .image {
     width: 35%;
@@ -88,7 +88,7 @@
   }
 }
 
-
+ */
 
 
 @media (max-width:768px) {
