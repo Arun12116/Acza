@@ -12,7 +12,8 @@
 
 .image {
   width: 30%;
-  height: 70%;
+  height: 60%;
+  margin-top: 3rem;
 }
 
 .category {
@@ -21,17 +22,75 @@
 
 .title {
   width: 8rem;
+  font-size: 1rem;
 
 }
 
 .card {
-  width: 35vw;
+  width: 30vw;
   height: 60vh
 }
 
 .btn {
   display: flex;
 }
+
+@media (max-width:1440px) {
+  .image {
+    width: 35%;
+    height: 70%;
+  }
+
+  .card {
+    width: 80vw;
+    height: 60vh;
+    padding: 2rem;
+    margin-top: 0;
+
+  }
+  .btn Button{
+    width:15vw;
+    height:6vh;
+    font-size: 25px;
+  }
+  .title {
+    width: 20rem;
+    
+
+  }
+}
+
+
+
+
+
+@media (max-width:1024px) {
+  .image {
+    width: 30%;
+    height: 60%;
+  }
+
+  .card {
+    width: 70vw;
+    height: 50vh;
+    padding: 2rem;
+    margin-top: 0;
+
+  }
+  .btn Button{
+    width:15vw;
+    height:5vh;
+    font-size: 20px;
+  }
+  .title {
+    width: 10rem;
+
+  }
+}
+
+
+
+
 @media (max-width:768px) {
   .image {
     width: 45%;
@@ -41,6 +100,7 @@
   .card {
     width: 80vw;
     height: 70vh;
+    padding: 2rem;
 
   }
 
@@ -52,14 +112,20 @@
 
 @media (max-width:425px) {
   .image {
-    width: 35%;
-    height: 40%;
+    width: 25%;
+    height: 32%;
   }
 
   .card {
-    width: 95vw;
-    height: 85vh;
+    width: 90vw;
+    height: 80vh;
+    margin-top: 0;
 
+  }
+  .btn Button{
+    width:20vw;
+    height:5vh;
+    font-size: 9px;
   }
 
   .title {
@@ -69,14 +135,20 @@
 }
 @media (max-width:375px) {
   .image {
-    width: 35%;
-    height: 40%;
+    width: 25%;
+    height: 30%;
+    margin-top: 0;
   }
 
   .card {
-    width: 95vw;
-    height: 90vh;
+    width: 90vw;
+    height: 70vh;
 
+  }
+  .btn Button{
+    width:20vw;
+    height:5vh;
+    font-size: 9px;
   }
 
   .title {
@@ -87,18 +159,27 @@
 
 @media (max-width:320px) {
   .image {
-    width: 35%;
+    width: 15%;
     height: 30%;
+    margin-top: 0px;
   }
 
   .card {
-    width: 95vw;
-    height: 80vh;
+    width: 90vw;
+    height: 65vh;
+    
 
+    
+  }
+  .btn Button{
+    width:20vw;
+    height:5vh;
+    font-size: 9px;
   }
 
   .title {
     width: 12rem;
+    
 
   }
 
