@@ -7,7 +7,7 @@ const Home = () => {
       <div className="home_container" >
 
         <video autoPlay muted loop style={{
-          width: "100%", height: "100%",
+          width: "100%", height: "auto",
           position: "relative"
         }} >
 
