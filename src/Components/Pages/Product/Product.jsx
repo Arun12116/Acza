@@ -7,6 +7,7 @@ import { addTocart, productAction } from '../../../Redux/CreateAction/Action'
 import { Box, Heading, Flex, CardFooter, Button, Card, Image, Stack, CardBody } from "@chakra-ui/react"
 import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
+import "./Product.css"
 import "react-toastify/dist/ReactToastify.css";
 
 
@@ -38,8 +39,6 @@ const Product = () => {
 
         )
 
-
-
       }).catch(() => {
         alert("api error")
 
@@ -54,9 +53,9 @@ const Product = () => {
     <>
       {
         productData.product === 0 ? <h1>Data lodaing</h1> :
-          <div className="product_Container" style={{padding:"1rem"}}>
-            <h1 style={{ color: "black", fontSize: "50px", fontWeight: "bold" }}>Product Components</h1>
-            <div>
+          <div className="product_Container" style={{ padding: "1rem" }}>
+            <h1 className='heading_product'>Product Components</h1>
+            <div className='para'>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis ad autem veniam non enim consequatur blanditiis animi dicta dolorum aliquam nostrum quidem vitae repellendus, soluta necessitatibus minus laborum esse.
                 Dignissimos omnis perspiciatis amet modi voluptatem praesentium. Unde cum molestiae, temporibus corporis eaque itaque expedita reiciendis animi quos ut illum placeat consequuntur dolor debitis recusandae voluptates repellendus dignissimos fugit eum.
                 Nobis assumenda reiciendis voluptate mollitia nihil minima nemo fugit! Accusantium ex quam quia repudiandae, nesciunt, voluptatem, quidem sed eius veritatis sequi distinctio est dignissimos assumenda odio praesentium necessitatibus eligendi vel?
@@ -72,43 +71,45 @@ const Product = () => {
 
                   return <Box>
                     <Card my={3} p={5} boxShadow='dark-lg' rounded='md' bg='white'
+                    className='card'
                       direction={{ base: 'column', sm: 'row' }}
                       overflow='hidden'
                       variant='outline'
-                   width={"40vw"}
-                   height={"50vh"}
+                      
+                     
+                      
                     >
                       <Image
                         objectFit='cover'
-
                         src={items.image}
                         alt='Caffe Latte'
-                        width={"14vw"}
-                        height={"40vh"}
-
+                        className='image'
                       />
 
                       <Stack ml={5}>
                         <CardBody my={5}>
-                          <Heading size='sm'>{items.category
+                          <Heading className='category' size='sm'>{items.category
                           }</Heading>
                           <Heading size='sm'>${items.price
                           }</Heading>
-                          <Heading size='sm'>${items.title
+                          <Heading className='title' size='sm'>${items.title
                           }</Heading>
 
                         </CardBody>
                         <CardFooter>
-                          <Button variant='solid' colorScheme='green' onClick={() => addItems(items)}>
-                            AddToCart
-                          </Button>
-                          <ToastContainer autoClose={200} />
-
-                          <Link to={`/ProductDeatiles/${items.id}`} >
-                            <Button ml={6} variant='solid' colorScheme='blue'>
-                              Deatiles
+                          <Box className='btn'>
+                            <Button variant='solid' colorScheme='green' onClick={() => addItems(items)}>
+                              AddToCart
                             </Button>
-                          </Link>
+                            <ToastContainer autoClose={200} />
+
+                            <Link to={`/ProductDeatiles/${items.id}`} >
+                              <Button ml={6} variant='solid' colorScheme='blue'>
+                                Deatiles
+                              </Button>
+                            </Link>
+                          </Box>
+
                         </CardFooter>
                       </Stack>
                     </Card>
