@@ -2,17 +2,21 @@ import React from 'react'
 import "./Navbar.css"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BsCartDash } from "react-icons/bs"
-import { BiUser } from "react-icons/bi"
+import { BiLogOut } from "react-icons/bi"
 
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 
-const Navbar = () => {
+const Navbar = ({ setIsLoggin }) => {
 
     const lengthOfCart = useSelector((mystore) => {
         return mystore;
 
     })
+
+    const logOut = _ => {
+        setIsLoggin(false)
+    }
     return (
         <>
             <div className="nav_Container">
@@ -32,9 +36,9 @@ const Navbar = () => {
                     </div>
                     <div className="cart">
                         <div>
-                            <Link to={"/Login"}>
-                                {<BiUser style={{ color: "white" }} />}
-                            </Link>
+
+                            {<BiLogOut onClick={logOut} style={{ color: "white" }} />}
+
                         </div>
 
                         <div>
