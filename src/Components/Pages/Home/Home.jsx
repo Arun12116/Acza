@@ -1,9 +1,11 @@
 import React from 'react'
 import "./Home.css"
 import hi from '../../Assets/hi.mp4'
+import Navbar from '../../Navbar/Navbar'
 const Home = () => {
   return (
     <>
+    <Navbar/>
       <div className="home_container" >
 
         <video autoPlay muted loop style={{

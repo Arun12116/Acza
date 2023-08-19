@@ -35,11 +35,7 @@ const Navbar = ({ setIsLoggin }) => {
 
                     </div>
                     <div className="cart">
-                        <div>
-
-                            {<BiLogOut onClick={logOut} style={{ color: "white" }} />}
-
-                        </div>
+                       
 
                         <div>
                             <Link to={"/Cart"} style={{ color: "white" }}>
@@ -54,6 +50,12 @@ const Navbar = ({ setIsLoggin }) => {
 
                             </div>
                         </div>
+
+                        <div>
+
+                        {<BiLogOut onClick={logOut} style={{ color: "white" }} />}
+
+                    </div>
                         <div>
                             <div className="hamburger">
 

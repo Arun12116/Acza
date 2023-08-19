@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
 import "./Product.css"
 import "react-toastify/dist/ReactToastify.css";
+import Navbar from '../../Navbar/Navbar'
 
 
 const Product = () => {
@@ -51,6 +52,7 @@ const Product = () => {
   }, [dispatch])
   return (
     <>
+    <Navbar/>
       {
         productData.product === 0 ? <h1>Data lodaing</h1> :
           <div className="product_Container" style={{ padding: "1rem" }}>

@@ -7,6 +7,7 @@ import { removeCart } from '../../../Redux/CreateAction/Action'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
+import Navbar from '../../Navbar/Navbar'
 
 const Cart = () => {
   const dispatch = useDispatch()
@@ -33,6 +34,7 @@ const Cart = () => {
   // console.log(data);
   return (
     <>
+    <Navbar/>
       {
 
         data.addToCart.length === 0 ? <h1 style={{ display: "flex", justifyContent: "center", fontSize: "3rem", fontWeight: "bolder" }}>No Items Added</h1> : <Box p={10}>
