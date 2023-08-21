@@ -2,21 +2,19 @@ import React from 'react'
 import "./Navbar.css"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BsCartDash } from "react-icons/bs"
-import { BiLogOut } from "react-icons/bi"
 
-import { Link } from "react-router-dom"
+
+import { Link, NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
 
-const Navbar = ({ setIsLoggin }) => {
+const Navbar = () => {
 
     const lengthOfCart = useSelector((mystore) => {
         return mystore;
 
     })
 
-    const logOut = _ => {
-        setIsLoggin(false)
-    }
+
     return (
         <>
             <div className="nav_Container">
@@ -28,42 +26,45 @@ const Navbar = ({ setIsLoggin }) => {
 
                     <div className="list">
                         <ul>
-                            <Link style={{ color: "white", textDecoration: "none" }} to={"/Home"}>HOME</Link>
-                            <Link style={{ color: "white", textDecoration: "none" }} to={"/Product"}>PRODUCT</Link>
-                            <Link style={{ color: "white", textDecoration: "none" }} to={"/Cart"}>CART</Link>
+                            <NavLink className="nav-Link" to={"/Home"}>HOME</NavLink>
+                            <NavLink className="nav-Link" to={"/Product"}>PRODUCT</NavLink>
+                            <NavLink className="nav-Link" to={"/Contact"}>Contact-Us</NavLink>
+                            <NavLink className="nav-Link" to={"/Cart"}>CART</NavLink>
                         </ul>
 
                     </div>
+
                     <div className="cart">
-                       
-
-                        <div>
+                        <div className='counter'>
                             <Link to={"/Cart"} style={{ color: "white" }}>
+                                {<BsCartDash className='cartIcon' />}
 
-
-                                {<BsCartDash />}
                             </Link>
-                        </div>
-                        <div>
-                            <div className='count'>
-                                <p>  {lengthOfCart.addToCart.length}</p>
 
-                            </div>
+
                         </div>
 
+                        <div className='count'>
+                            <h1>  {lengthOfCart.addToCart.length}</h1>
+
+                        </div>
+
                         <div>
 
-                        {<BiLogOut onClick={logOut} style={{ color: "white" }} />}
+                            <h2 className='login_btn'>Login</h2>
+
+                        </div>
+
+
+                        <div className="hamburger">
+
+                            {<GiHamburgerMenu />}
+                        </div>
+
 
                     </div>
-                        <div>
-                            <div className="hamburger">
 
-                                {<GiHamburgerMenu />}
-                            </div>
-                        </div>
 
-                    </div>
 
                 </div>
 

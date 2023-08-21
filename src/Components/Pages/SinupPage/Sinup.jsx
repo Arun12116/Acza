@@ -27,7 +27,7 @@ const Sinup = ({ setIsLoggin }) => {
     const SignUpHandle = _ => {
 
         const { email, dateOfBirth, password } = userDeatiles;
-
+        setData(userDeatiles)
         if (email === "") {
             alert("please enter Email Address")
         } else if (!email.includes("@")) {

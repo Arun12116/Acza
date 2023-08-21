@@ -5,6 +5,9 @@ import { Box, Button, Center, Input, Stack } from "@chakra-ui/react"
 
 
 const Login = ({ setLoggin }) => {
+    const [register, setRegister] = useState([])
+    //
+
 
 
     const [lsUserDeatiles, setLsUserDeatiles] = useState({
@@ -52,7 +55,7 @@ const Login = ({ setLoggin }) => {
                 if (login.length === 0) {
                     alert("please fill vaild user deatiles")
                 }else{
-                    
+                   
                 }
             }
         }

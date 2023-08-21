@@ -1,6 +1,5 @@
 
 let items = {
-
     product: [],
     productDeatiles: [],
     addToCart: [],
