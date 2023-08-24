@@ -1,4 +1,4 @@
-import { ADD_TO_CART, SETPRODUCT, REMOVE_CART, PRODUCT_DEATILES} from "../ActionType/ActionType"
+import { ADD_TO_CART, SETPRODUCT, REMOVE_CART, PRODUCT_DEATILES, MEANS_CLOTHES} from "../ActionType/ActionType"
 
 export const productAction = (data) => {
     return {
@@ -35,6 +35,15 @@ export const removeCart = (id) => {
 
         type: REMOVE_CART,
         payload: id
+    }
+
+}
+
+export const addMeansClothes = (data) => {
+    return {
+
+        type: MEANS_CLOTHES,
+        payload: data
     }
 
 }

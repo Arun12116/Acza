@@ -5,34 +5,9 @@
     /* background-color: black; */
 }
 
-.home_container p {
-
-    color: rgb(221, 218, 224);
-    font-size: 1vw;
-    margin-top: 1rem;
-
+.banner-image {
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.home_container h1 {
-    color: rgb(212, 44, 44);
-    font-weight: bolder;
-    font-size: 3vw;
-}
-
-.home_container button {
-    width: 9vw;
-    height: 7vh;
-    margin-top: 1rem;
-    border-radius: 8px;
-    border: none;
-    background-color: aquamarine;
-    cursor: pointer;
-}
-/* .heading-main{
-    width: 50vw;
-    height: 50vh;
-   display: flex; 
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-} */

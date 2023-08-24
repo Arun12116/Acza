@@ -20,7 +20,7 @@ const Navbar = () => {
             <div className="nav_Container">
                 <div className="nav_Body">
                     <div className="logo">
-                        <h1>Geeks-Store</h1>
+                        <h1>Booster</h1>
                     </div>
 
 

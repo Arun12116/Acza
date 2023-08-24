@@ -3,9 +3,11 @@ let items = {
     product: [],
     productDeatiles: [],
     addToCart: [],
-    totalAmount: 0
+    totalAmount: 0,
+    meanData: []
 
 }
+// console.log(MeanData);
 
 const myReducer = (state = items, action) => {
 
@@ -44,10 +46,26 @@ const myReducer = (state = items, action) => {
                     ...state,
                     addToCart: state.addToCart.filter((items) => items.id !== action.payload)
 
+                }
+            }
+        case "addMeansClothes":
+            {
+                // console.log(action.payload,"deletecart")
+
+                return {
+
+                    ...state,
+
+                    meanData: state.product.filter((ele) => ele.category === action.payload)
+                        
+
+                    
+
 
 
                 }
             }
+
 
         case "TOTALAMOUNT": {
             return {
@@ -55,6 +73,9 @@ const myReducer = (state = items, action) => {
 
 
             }
+
+
+
         }
         default: { return state }
 
