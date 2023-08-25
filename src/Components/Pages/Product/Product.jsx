@@ -1,7 +1,9 @@
 import React from 'react'
+import { useEffect } from 'react'
+import axios from "axios"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { addTocart } from '../../../Redux/CreateAction/Action'
+import { addTocart, productAction } from '../../../Redux/CreateAction/Action'
 import { Box, Heading, Flex, CardFooter, Button, Card, Image, Stack, CardBody } from "@chakra-ui/react"
 import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
@@ -12,6 +14,7 @@ import Navbar from '../../Navbar/Navbar'
 
 const Product = () => {
 
+  let dispatch = useDispatch();
   let productData = useSelector((mystore) => {
 
     return mystore
@@ -26,7 +29,28 @@ const Product = () => {
 
   }
 
+  useEffect(() => {
+    let response = _ => {
 
+      axios.get("https://fakestoreapi.com/products").then((res) => {
+        // console.log(res.data);
+
+        dispatch(productAction(res.data)
+
+
+
+        )
+
+      }).catch(() => {
+        alert("api error")
+
+      })
+
+    }
+
+    response();
+
+  }, [dispatch])
   return (
     <>
       <Navbar />

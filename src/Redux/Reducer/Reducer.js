@@ -1,10 +1,10 @@
-
 let items = {
     product: [],
     productDeatiles: [],
     addToCart: [],
     totalAmount: 0,
     meanData: []
+
 
 }
 // console.log(MeanData);
@@ -35,8 +35,6 @@ const myReducer = (state = items, action) => {
             }
 
         }
-
-
         case "removeCart":
             {
                 // console.log(action.payload,"deletecart")
@@ -48,23 +46,66 @@ const myReducer = (state = items, action) => {
 
                 }
             }
-        case "addMeansClothes":
+        case "meansClothes":
+            {
+                if (action.payload === "all") {
+                    return {
+                        ...state,
+
+                        meanData: [...state.product]
+                    }
+                }
+                else {
+                    return {
+                        ...state,
+
+                        meanData: state.product.filter((ele) => ele.category === action.payload)
+
+                    }
+                }
+                // console.log(action.payload,"deletecart")
+
+
+            }
+        case "womansClothes":
             {
                 // console.log(action.payload,"deletecart")
 
                 return {
-
                     ...state,
 
-                    meanData: state.product.filter((ele) => ele.category === action.payload)
-                        
-
-                    
-
-
+                    womenData: state.product.filter((ele) => ele.category === action.payload)
 
                 }
             }
+
+
+
+        case "jwerlary":
+            {
+                // console.log(action.payload,"deletecart")
+
+                return {
+                    ...state,
+
+                    jwerlaryData: state.product.filter((ele) => ele.category === action.payload)
+
+                }
+            }
+        case "electronic":
+            {
+                // console.log(action.payload,"deletecart")
+
+                return {
+                    ...state,
+
+                    electronicData: state.product.filter((ele) => ele.category === action.payload)
+
+                }
+            }
+
+
+
 
 
         case "TOTALAMOUNT": {

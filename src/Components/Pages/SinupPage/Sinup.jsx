@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Box, Button, Center, Heading, Input, Stack, Text } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
-const Sinup = ({ setIsLoggin }) => {
+import Navbar from '../../Navbar/Navbar'
+const Sinup = () => {
 
     const [userDeatiles, setUserDeatiles] = useState({
         email: "",
@@ -46,24 +47,29 @@ const Sinup = ({ setIsLoggin }) => {
 
     }
     return (
+        <>
+        <Navbar/>
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"} w='100%' h='100vh'>
 
             <Box boxShadow='dark-lg' p='6' rounded='md' bg='white' height={"35em"} >
                 <Heading size={"sm"} color={"green"}>SIGN UP</Heading>
                 <Stack spacing={10} mt={19}>
+                    <Input type='text' placeholder='Enter your Name' size='lg' width={"30em"} name='name' onChange={getUser} />
+
                     <Input type='email' placeholder='Enter Email' size='lg' width={"30em"} name='email' onChange={getUser} />
                     <Input type='date' placeholder='Enter Date Of Birth' size='lg' width={"30em"} name='dateOfBirth' onChange={getUser} />
 
                     <Input type='password' placeholder='Enter Password' size='lg' width={"30em"} name='password' onChange={getUser} />
 
                     <Center>
+
                         <Button colorScheme='blue' size={'lg'} width={"8em"} onClick={SignUpHandle}>SIGN UP</Button>
 
                     </Center>
                     <center>
                         <Box fontSize={"0.90rem"} fontWeight={"bold"}>
                             Already a user ?  <Link to={"/Login"}>
-                                <Text onClick={(() => setIsLoggin(false))} color={"blue"} fontWeight={"bold"} cursor={"pointer"} fontSize={"lg"}>Login</Text>
+                                <Text color={"blue"} fontWeight={"bold"} cursor={"pointer"} fontSize={"lg"}>Login</Text>
 
                             </Link>
 
@@ -79,6 +85,9 @@ const Sinup = ({ setIsLoggin }) => {
 
 
         </Box>
+        
+        </>
+        
     )
 }
 

@@ -1,23 +1,20 @@
 
-
+import "./Login.css"
 import React, { useState } from 'react'
 import { Box, Button, Center, Input, Stack } from "@chakra-ui/react"
-
-
-const Login = ({ setLoggin }) => {
-    const [register, setRegister] = useState([])
-    //
+import Navbar from '../../Navbar/Navbar'
+import { Link, useNavigate } from "react-router-dom"
 
 
 
+const Login = () => {
     const [lsUserDeatiles, setLsUserDeatiles] = useState({
         email: "",
         password: "",
 
-
     })
 
-
+    const navigate = useNavigate();
 
     const changeHandle = (e) => {
         const { value, name } = e.target
@@ -33,7 +30,7 @@ const Login = ({ setLoggin }) => {
     const loginHandle = _ => {
         const { email, password } = lsUserDeatiles;
         const userArray = localStorage.getItem("dataOfUser")
-        console.log(userArray);
+        // console.log(userArray);
         if (email === "") {
             alert("please enter Email Address")
         } else if (!email.includes("@")) {
@@ -53,9 +50,10 @@ const Login = ({ setLoggin }) => {
                     return ele.email === email && ele.password === password
                 })
                 if (login.length === 0) {
-                    alert("please fill vaild user deatiles")
-                }else{
-                   
+                    alert("please enter a valid Deatiles")
+                } else {
+                    navigate("/Product")
+                    
                 }
             }
         }
@@ -63,29 +61,38 @@ const Login = ({ setLoggin }) => {
 
     }
     return (
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} w='100%' h='100vh'>
+        <>
+            <Navbar />
+            <Box display={"flex"} justifyContent={"center"} alignItems={"center"} w='100%' h='100vh'>
 
-            <Box boxShadow='dark-lg' p='6' rounded='md' bg='white' height={"25em"} >
+                <Box boxShadow='dark-lg' p='6' rounded='md' bg='white' height={"27em"} >
 
-                <Stack spacing={10} mt={20}>
-                    <Input placeholder='Enter Email' name='email' size='lg' width={"30em"} onChange={changeHandle} />
-                    <Input placeholder='Enter Password' name="password" size='lg' width={"30em"} onChange={changeHandle} />
-                    <Center>
+                    <Stack spacing={10} mt={19}>
 
-                        <Button colorScheme='blue' size={'lg'} width={"8em"} onClick={loginHandle}>Login</Button>
+                        <Input placeholder='Enter Email' name='email' size='lg' width={"30em"} onChange={changeHandle} />
+                        <Input placeholder='Enter Password' name="password" size='lg' width={"30em"} onChange={changeHandle} />
+                        <Center>
+
+                            <Button colorScheme='blue' size={'lg'} width={"8em"} onClick={loginHandle}>Login</Button>
+
+                        </Center>
+                        <Center>
+                            <Box>If you are not Register? <Link to={"/Sinup"}>
+                                <span className='sinup'>Sing-Up</span>
+                            </Link> </Box>
+
+                        </Center>
+                    </Stack>
 
 
+                </Box>
 
-                    </Center>
-                </Stack>
+
 
 
             </Box>
+        </>
 
-
-
-
-        </Box>
     )
 }
 

@@ -1,4 +1,4 @@
-import { ADD_TO_CART, SETPRODUCT, REMOVE_CART, PRODUCT_DEATILES, MEANS_CLOTHES} from "../ActionType/ActionType"
+import { ADD_TO_CART, SETPRODUCT, REMOVE_CART, PRODUCT_DEATILES, MEANS_CLOTHES, WOMEANS_CLOTHES, JWELARY, ELECTRONIC} from "../ActionType/ActionType"
 
 export const productAction = (data) => {
     return {
@@ -43,6 +43,30 @@ export const addMeansClothes = (data) => {
     return {
 
         type: MEANS_CLOTHES,
+        payload: data
+    }
+
+}
+export const addWomanClothes = (data) => {
+    return {
+
+        type: WOMEANS_CLOTHES,
+        payload: data
+    }
+
+}
+export const addJwelary = (data) => {
+    return {
+
+        type: JWELARY,
+        payload: data
+    }
+
+}
+export const addElectronic = (data) => {
+    return {
+
+        type: ELECTRONIC,
         payload: data
     }
 

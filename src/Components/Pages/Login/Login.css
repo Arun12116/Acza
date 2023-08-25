@@ -1,0 +1,7 @@
+.sinup {
+    color: blue;
+}
+
+.sinup:hover{
+    cursor: pointer;
+}
