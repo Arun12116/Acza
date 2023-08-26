@@ -1,4 +1,7 @@
-import { ADD_TO_CART, SETPRODUCT, REMOVE_CART, PRODUCT_DEATILES, MEANS_CLOTHES, WOMEANS_CLOTHES, JWELARY, ELECTRONIC} from "../ActionType/ActionType"
+import {
+    ADD_TO_CART, SETPRODUCT, REMOVE_CART,
+    PRODUCT_DEATILES, MEANS_CLOTHES, WOMEANS_CLOTHES, JWELARY, ELECTRONIC, FILTER_DATA, ALL_PRODUCT
+} from "../ActionType/ActionType"
 
 export const productAction = (data) => {
     return {
@@ -8,6 +11,23 @@ export const productAction = (data) => {
     }
 
 };
+export const filterDataAction = (data) => {
+    return {
+        type: FILTER_DATA,
+        payload: data
+
+    }
+
+};
+export const getAllData = (data) => {
+    return {
+        type: ALL_PRODUCT,
+        payload: data
+
+    }
+
+};
+
 
 export const addTocart = (data) => {
 
@@ -38,6 +58,7 @@ export const removeCart = (id) => {
     }
 
 }
+
 
 export const addMeansClothes = (data) => {
     return {

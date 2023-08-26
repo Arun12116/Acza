@@ -1,6 +1,5 @@
 
 import Home from "./Components/Pages/Home/Home";
-import Product from "./Components/Pages/Product/Product"
 import Cart from "./Components/Pages/Cart/Cart"
 import { Routes, Route } from "react-router-dom"
 import ProductDeatiles from "./Components/Pages/ProductDeatiles/ProductDeatiles";
@@ -19,7 +18,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/Product" element={<Product />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/ProductDeatiles/:id" element={<ProductDeatiles />} />
         <Route path="/Cart" element={<Protected  Components={Cart} />} />

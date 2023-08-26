@@ -3,8 +3,7 @@ let items = {
     productDeatiles: [],
     addToCart: [],
     totalAmount: 0,
-    meanData: []
-
+    filterData: []
 
 }
 // console.log(MeanData);
@@ -21,6 +20,16 @@ const myReducer = (state = items, action) => {
 
             }
         }
+        case "setFilterData": {
+            return {
+                ...state,
+                filterData: action.payload
+
+
+            }
+        }
+
+
         case "productDeatiles": {
             return {
 
@@ -46,67 +55,51 @@ const myReducer = (state = items, action) => {
 
                 }
             }
-        case "meansClothes":
-            {
-                if (action.payload === "all") {
-                    return {
-                        ...state,
 
-                        meanData: [...state.product]
-                    }
-                }
-                else {
-                    return {
-                        ...state,
+        case "allProduct": {
+            return {
+                product: state.filterData
+            }
+        }
 
-                        meanData: state.product.filter((ele) => ele.category === action.payload)
+        case "meansClothes": {
+            return {
+                ...state,
 
-                    }
-                }
-                // console.log(action.payload,"deletecart")
-
+                product: state.filterData.filter((ele) => ele.category === "men's clothing")
 
             }
-        case "womansClothes":
-            {
-                // console.log(action.payload,"deletecart")
 
-                return {
-                    ...state,
+        }
 
-                    womenData: state.product.filter((ele) => ele.category === action.payload)
 
-                }
+        case "womansClothes": {
+            return {
+                ...state,
+
+                product: state.filterData.filter((ele) => ele.category === "women's clothing")
+
             }
 
+        }
+        case "jwerlary": {
+            return {
+                ...state,
 
+                product: state.filterData.filter((ele) => ele.category === "jewelery")
 
-        case "jwerlary":
-            {
-                // console.log(action.payload,"deletecart")
-
-                return {
-                    ...state,
-
-                    jwerlaryData: state.product.filter((ele) => ele.category === action.payload)
-
-                }
-            }
-        case "electronic":
-            {
-                // console.log(action.payload,"deletecart")
-
-                return {
-                    ...state,
-
-                    electronicData: state.product.filter((ele) => ele.category === action.payload)
-
-                }
             }
 
+        }
+        case "electronic": {
+            return {
+                ...state,
 
+                product: state.filterData.filter((ele) => ele.category === "electronics")
 
+            }
 
+        }
 
         case "TOTALAMOUNT": {
             return {
@@ -126,3 +119,37 @@ const myReducer = (state = items, action) => {
 
 
 export default myReducer
+
+
+
+
+
+// const allData = () => {
+
+    // const options = {
+    //   method: 'GET',
+    //   url: 'https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete',
+    //   params: {
+    //     query: 'eiffel tower',
+    //     lang: 'en_US',
+    //     units: 'km'
+    //   },
+    //   headers: {
+    //     'X-RapidAPI-Key': 'f0f97a3897msh90131b983abf563p16fdaejsn3bddd5e702fc',
+    //     'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
+    //   }
+    // };
+
+    // try {
+    // 	const response = await axios.request(options);
+    // 	console.log(response.data);
+    // } catch (error) {
+    // 	console.error(error);
+    // }
+
+
+
+
+// }
+
+// const axios = require('axios');

@@ -3,18 +3,20 @@ import { useEffect } from 'react'
 import axios from "axios"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { addTocart, productAction } from '../../../Redux/CreateAction/Action'
+import { addTocart, filterDataAction,  productAction } from '../../../Redux/CreateAction/Action'
 import { Box, Heading, Flex, CardFooter, Button, Card, Image, Stack, CardBody } from "@chakra-ui/react"
 import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
 import "./Product.css"
 import "react-toastify/dist/ReactToastify.css";
-import Navbar from '../../Navbar/Navbar'
+
 
 
 const Product = () => {
 
   let dispatch = useDispatch();
+
+
   let productData = useSelector((mystore) => {
 
     return mystore
@@ -28,13 +30,13 @@ const Product = () => {
 
 
   }
-
   useEffect(() => {
     let response = _ => {
 
       axios.get("https://fakestoreapi.com/products").then((res) => {
         // console.log(res.data);
-
+        // Dispatch(filterdata(res.data))
+        dispatch(filterDataAction(res.data))
         dispatch(productAction(res.data)
 
 
@@ -53,11 +55,11 @@ const Product = () => {
   }, [dispatch])
   return (
     <>
-      <Navbar />
+      
       {
         productData.product === 0 ? <h1>Data lodaing</h1> :
           <div className="product_Container" style={{ padding: "1rem" }}>
-            <h1 className='heading_product'>Product Components</h1>
+        
             <Flex flexWrap={"wrap"} justifyContent={"space-around"} my={5} >
               {
 
