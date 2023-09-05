@@ -53,7 +53,7 @@ const Navbar = () => {
                         <div>
 
                         <Link to={"/login"}>
-                        <Button  bgColor={'blue'} size={"lg"} color={"white"}
+                        <Button  bgColor={'blue'} size={"md"} color={"white"}
                         
                         >Login</Button>
                         </Link> 
@@ -62,7 +62,7 @@ const Navbar = () => {
                         <div>
 
                         <Link to={"/Sinup"}>
-                        <Button className='login_btn' bgColor={'red'} size={"lg"} color={"white"}  >SinUp</Button>
+                        <Button className='login_btn' bgColor={'red'} size={"md"} color={"white"}  >SinUp</Button>
                         </Link> 
 
                         </div>
