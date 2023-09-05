@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import axios from "axios"
 import { productAction } from "../../../Redux/CreateAction/Action"
 import FilterData from "../FilterProduct/FilterData"
+import Footer from "../../Footer/Footer"
 const Home = () => {
 
   let dispatch = useDispatch();
@@ -38,8 +39,10 @@ const Home = () => {
   return (
     <>
       <Navbar />
-
+      
       <FilterData />
+      
+      <Footer/>
     </>
   )
 }

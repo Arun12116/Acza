@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
 import Navbar from '../../Navbar/Navbar'
 
+
 const Cart = () => {
   const dispatch = useDispatch()
   const data = useSelector((mycart) => {

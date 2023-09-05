@@ -10,6 +10,8 @@ import Page404 from "./Components/Pages/404Page/Page404";
 import Contact from "./Components/Pages/Contact/Contact";
 
 import Protected from "./Components/ProtectedRoutes/Protected";
+import Product from "./Components/Pages/Product/Product";
+
 function App() {
 
   return (
@@ -21,9 +23,13 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/ProductDeatiles/:id" element={<ProductDeatiles />} />
         <Route path="/Cart" element={<Protected  Components={Cart} />} />
+        <Route path="/Product" element={<Protected  Components={Product} />} />
+
         <Route path="/Login" element={<Login />} />
         <Route path="/Sinup" element={<Sinup/>} />
         <Route path="/*" element={<Page404 />} />
+
+
 
 
 

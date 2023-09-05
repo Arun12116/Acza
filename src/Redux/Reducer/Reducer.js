@@ -58,6 +58,7 @@ const myReducer = (state = items, action) => {
 
         case "allProduct": {
             return {
+                ...state,
                 product: state.filterData
             }
         }

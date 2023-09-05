@@ -27,7 +27,7 @@ const Navbar = () => {
                     <div className="list">
                         <ul>
                             <NavLink className="nav-Link" to={"/Home"}>HOME</NavLink>
-                            <NavLink className="nav-Link" to={"/Product"}>PRODUCT</NavLink>
+                            <NavLink className="nav-Link" to={"/"}>PRODUCT</NavLink>
                             <NavLink className="nav-Link" to={"/Contact"}>Contact-Us</NavLink>
                             <NavLink className="nav-Link" to={"/Cart"}>CART</NavLink>
                         </ul>

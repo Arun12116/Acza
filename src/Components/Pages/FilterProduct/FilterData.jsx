@@ -18,12 +18,10 @@ const FilterData = () => {
     return mystore.FilterData
   })
 
- 
-
   return (
-    <div>
+    <>
 
-      <div className="home_container" >
+      <div className="home_container" id='Product' >
 
         <div className="banner">
           <img src={imge} alt="banner" className='banner-image' />
@@ -42,7 +40,8 @@ const FilterData = () => {
         <Box mt={5}>
 
           <Center gap={2}>
-            <Button color={"Black"} bgColor={"gray.500"} onClick={() => dispatch(getAllData(fData))}>
+          
+            <Button color={"Black"} bgColor={"gray.500"} bg={"yellow.500"} onClick={() => dispatch(getAllData(fData))}>
               AllProduct
             </Button>
 
@@ -63,11 +62,11 @@ const FilterData = () => {
           </Center>
 
         </Box>
-        <Product/>
+        <Product />
 
       </div>
 
-    </div>
+    </>
   )
 }
 
