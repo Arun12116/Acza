@@ -64,7 +64,8 @@ const Product = () => {
 
                   return <Box>
                     <Card my={3} p={5} boxShadow='dark-lg' rounded='md' bg='white'
-                      className='card'
+                      width={500}
+                      height={500}
                       direction={{ base: 'column', sm: 'row' }}
                       overflow='hidden'
                       variant='outline'
@@ -97,7 +98,7 @@ const Product = () => {
                             <ToastContainer autoClose={200} />
 
                             <Link to={`/ProductDeatiles/${items.id}`} >
-                              <Button ml={6} variant='solid' colorScheme='blue'>
+                              <Button ml={6}   variant='solid' colorScheme='blue'>
                                 Deatiles
                               </Button>
                             </Link>
