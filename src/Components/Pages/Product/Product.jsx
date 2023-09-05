@@ -65,7 +65,7 @@ const Product = () => {
                   return <Box>
                     <Card my={3} p={5} boxShadow='dark-lg' rounded='md' bg='white'
                       width={500}
-                      height={500}
+                      height={450}
                       direction={{ base: 'column', sm: 'row' }}
                       overflow='hidden'
                       variant='outline'
@@ -78,6 +78,11 @@ const Product = () => {
                         src={items.image}
                         alt='Caffe Latte'
                         className='image'
+                        width={"30%"}
+                        height={"60%"}
+                        // width: 30%;
+                        // height: 60%;
+                        // margin-top: 3rem;
                       />
 
                       <Stack ml={5}>
