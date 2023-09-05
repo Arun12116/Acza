@@ -9,10 +9,6 @@ import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
 import "./Product.css"
 import "react-toastify/dist/ReactToastify.css";
-
-
-
-
 const Product = () => {
 
   let dispatch = useDispatch();
