@@ -64,8 +64,8 @@ const Product = () => {
 
                   return <Box>
                     <Card my={3} p={5} boxShadow='dark-lg' rounded='md' bg='white'
-                      width={500}
-                      height={450}
+                     maxW={"lg"}
+                     height={"96"}
                       direction={{ base: 'column', sm: 'row' }}
                       overflow='hidden'
                       variant='outline'
@@ -77,26 +77,25 @@ const Product = () => {
                         objectFit='cover'
                         src={items.image}
                         alt='Caffe Latte'
-                        className='image'
-                        width={"30%"}
-                        height={"60%"}
-                        // width: 30%;
-                        // height: 60%;
-                        // margin-top: 3rem;
+                      
+                        boxSize='200px'
+                        padding={"10"}
+                     
                       />
 
                       <Stack ml={5}>
                         <CardBody my={5}>
-                          <Heading className='category' size='sm'>{items.category
+                          <Heading  size='md'>{items.category
                           }</Heading>
                           <Heading size='sm'>${items.price
                           }</Heading>
-                          <Heading className='title' size='sm'>${items.title
+                          <Heading fontSize={"sm"}  >${items.title
                           }</Heading>
 
                         </CardBody>
                         <CardFooter>
-                          <Box className='btn'>
+                      
+                          <Flex>
                             <Button variant='solid' colorScheme='green' onClick={() => addItems(items)}>
                               AddToCart
                             </Button>
@@ -107,7 +106,7 @@ const Product = () => {
                                 Deatiles
                               </Button>
                             </Link>
-                          </Box>
+                          </Flex>
 
                         </CardFooter>
                       </Stack>

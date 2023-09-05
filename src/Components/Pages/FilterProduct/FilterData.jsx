@@ -41,21 +41,21 @@ const FilterData = () => {
 
           <Center gap={2}>
 
-            <Button color={"Black"} bgColor={"gray.500"} bg={"yellow.500"} size={"md"} onClick={() => dispatch(getAllData(fData))}>
+            <Button color={"Black"} bgColor={"gray.500"} bg={"yellow.500"} size={"lg"} onClick={() => dispatch(getAllData(fData))}>
               AllProduct
             </Button>
 
-            <Button onClick={() => dispatch(addMeansClothes(fData))} color={"Black"} size={"md"} bgColor={"gray.500"}>
+            <Button onClick={() => dispatch(addMeansClothes(fData))} color={"Black"} size={"lg"} bgColor={"gray.500"}>
               Men's clothing
             </Button>
-            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addWomanClothes(fData))}>
+            <Button color={"Black"} size={"lg"} bgColor={"gray.500"} onClick={() => dispatch(addWomanClothes(fData))}>
               WomenClothing
             </Button>
-            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addJwelary(fData))} >
+            <Button color={"Black"} size={"lg"} bgColor={"gray.500"} onClick={() => dispatch(addJwelary(fData))} >
               Jwelary
             </Button>
 
-            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addElectronic(fData))}>
+            <Button color={"Black"} size={"lg"} bgColor={"gray.500"} onClick={() => dispatch(addElectronic(fData))}>
               Electronic
             </Button>
 
