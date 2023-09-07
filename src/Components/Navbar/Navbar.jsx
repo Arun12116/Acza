@@ -2,7 +2,7 @@ import React from 'react'
 import "./Navbar.css"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BsCartDash } from "react-icons/bs"
-import {Button} from "@chakra-ui/react"
+import { Button} from "@chakra-ui/react"
 
 
 import { Link, NavLink } from "react-router-dom"
@@ -52,18 +52,18 @@ const Navbar = () => {
 
                         <div>
 
-                        <Link to={"/login"}>
-                        <Button  bgColor={'blue'} size={"md"} color={"white"}
-                        
-                        >Login</Button>
-                        </Link> 
+                            <Link to={"/login"}>
+                                <Button bgColor={'blue'} size={"md"} color={"white"}
+
+                                >Login</Button>
+                            </Link>
 
                         </div>
                         <div>
 
-                        <Link to={"/Sinup"}>
-                        <Button className='login_btn' bgColor={'red'} size={"md"} color={"white"}  >SinUp</Button>
-                        </Link> 
+                            <Link to={"/Sinup"}>
+                                <Button className='login_btn' bgColor={'red'} size={"md"} color={"white"}  >SinUp</Button>
+                            </Link>
 
                         </div>
 

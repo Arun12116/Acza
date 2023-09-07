@@ -3,8 +3,8 @@ import { useEffect } from 'react'
 import axios from "axios"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { addTocart, filterDataAction,  productAction } from '../../../Redux/CreateAction/Action'
-import { Box, Heading, Flex, CardFooter, Button, Card, Image, Stack, CardBody } from "@chakra-ui/react"
+import { addTocart, filterDataAction, productAction } from '../../../Redux/CreateAction/Action'
+import {  Heading, Flex, CardFooter, Button, Text, Divider, ButtonGroup, Card, Image, Stack, CardBody } from "@chakra-ui/react"
 import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
 import "./Product.css"
@@ -52,67 +52,51 @@ const Product = () => {
   }, [dispatch])
   return (
     <>
-      
+
       {
         productData.product === 0 ? <h1>Data lodaing</h1> :
           <div className="product_Container" style={{ padding: "1rem" }}>
-        
+
             <Flex flexWrap={"wrap"} justifyContent={"space-around"} my={5} >
               {
 
                 productData.product.map((items) => {
-
-                  return <Box>
-                    <Card my={3} p={5} boxShadow='dark-lg' rounded='md' bg='white'
-                     maxW={"lg"}
-                     height={"96"}
-                      direction={{ base: 'column', sm: 'row' }}
-                      overflow='hidden'
-                      variant='outline'
-
-
-
-                    >
+                  return <Card maxW='lg' m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
+                    <CardBody>
                       <Image
-                        objectFit='cover'
                         src={items.image}
-                        alt='Caffe Latte'
-                      
-                        boxSize='200px'
-                        padding={"10"}
-                     
+                        alt='Green double couch with wooden legs'
+                        borderRadius='lg'
+                        boxSize={150}
+
                       />
-
-                      <Stack ml={5}>
-                        <CardBody my={5}>
-                          <Heading  size='md'>{items.category
-                          }</Heading>
-                          <Heading size='sm'>${items.price
-                          }</Heading>
-                          <Heading fontSize={"sm"}  >${items.title
-                          }</Heading>
-
-                        </CardBody>
-                        <CardFooter>
-                      
-                          <Flex>
-                            <Button variant='solid' colorScheme='green' onClick={() => addItems(items)}>
-                              AddToCart
-                            </Button>
+                      <Stack mt='6' spacing='3'>
+                        <Heading size='md'>{items.category}</Heading>
+                        <Text width={400}>
+                          {items.title}
+                        </Text>
+                        <Text color='blue.600' fontSize='2xl'>
+                          ${items.price}
+                        </Text>
+                      </Stack>
+                    </CardBody>
+                    <Divider />
+                    <CardFooter>
+                      <ButtonGroup spacing='10'>
+                        <Button  variant='solid' colorScheme='green' onClick={() => addItems(items)}>
+                          Add to cart
+                        </Button>
                             <ToastContainer autoClose={200} />
 
-                            <Link to={`/ProductDeatiles/${items.id}`} >
-                              <Button ml={6}   variant='solid' colorScheme='blue'>
-                                Deatiles
-                              </Button>
-                            </Link>
-                          </Flex>
+                        <Link to={`/ProductDeatiles/${items.id}`} >
+                          <Button variant='solid' colorScheme='blue'>
+                            View More
+                          </Button>
+                        </Link>
 
-                        </CardFooter>
-                      </Stack>
-                    </Card>
-
-                  </Box>
+                      </ButtonGroup>
+                    </CardFooter>
+                  </Card>
                 })
               }
 
