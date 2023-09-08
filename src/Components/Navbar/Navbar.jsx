@@ -23,8 +23,6 @@ const Navbar = () => {
                     <div className="logo">
                         <h1>Booster</h1>
                     </div>
-
-
                     <div className="list">
                         <ul>
                             <NavLink className="nav-Link" to={"/Home"}>HOME</NavLink>

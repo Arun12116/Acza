@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,300;1,400&family=Nanum+Gothic:wght@700&family=Open+Sans&family=Outfit:wght@100;200;300&family=Poppins:wght@300;400&family=Roboto:wght@300&family=Tajawal:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  
+}
 @media (max-width:425px) {
   .text {
     width: 13rem;
@@ -51,6 +60,11 @@
     width: 13rem;
     font-size: 10px;
   }
+/* .card{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+} */
 
   .spacing {
     justify-content: center;

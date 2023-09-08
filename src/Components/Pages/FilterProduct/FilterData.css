@@ -20,6 +20,9 @@
   margin-left: 3rem;
   width: 20rem;
     }
+    .banner{
+      width: 120%;
+   }
     
       }
 @media (max-width:375px) {
@@ -28,6 +31,9 @@
  flex-direction: column;
  
     }
+    .banner{
+      width: 120%;
+   }
     
       }
  
@@ -37,6 +43,9 @@
 display: flex;
 flex-direction: column;
 
+   }
+   .banner{
+      width: 120%;
    }
    
      }
