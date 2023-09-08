@@ -55,7 +55,7 @@ const Contact = () => {
 
 
                             <Box>
-                                <Button  colorScheme='blue'  variant='solid' >Submit</Button>
+                                <Button  colorScheme='blue'  variant='solid' size={'sm'} >Submit</Button>
                             </Box>
                         </Flex>
 
