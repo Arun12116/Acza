@@ -57,7 +57,7 @@ const Product = () => {
         productData.product === 0 ? <h1>Data lodaing</h1> :
           <div className="product_Container" style={{ padding: "1rem" }}>
 
-            <Flex flexWrap={"wrap"} justifyContent={"space-around"} my={5} >
+            <Flex flexWrap={"wrap"} justifyContent={"space-around"}  >
               {
 
                 productData.product.map((items) => {
