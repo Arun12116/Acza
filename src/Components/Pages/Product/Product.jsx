@@ -61,7 +61,7 @@ const Product = () => {
               {
 
                 productData.product.map((items) => {
-                  return <Card width='sm' height={"md"} m={3} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
+                  return <Card width='lg' height={"md"} m={3} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
                     <CardBody>
                       <Image
                         src={items.image}
