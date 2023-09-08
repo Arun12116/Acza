@@ -57,11 +57,11 @@ const Product = () => {
         productData.product === 0 ? <h1>Data lodaing</h1> :
           <div className="product_Container" style={{ padding: "1rem" }}>
 
-            <Flex flexWrap={"wrap"} justifyContent={"space-between"} my={5} >
+            <Flex flexWrap={"wrap"} justifyContent={"space-around"} my={5} >
               {
 
                 productData.product.map((items) => {
-                  return <Card width='lg' m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
+                  return <Card width='md' m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
                     <CardBody>
                       <Image
                         src={items.image}
