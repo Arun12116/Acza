@@ -10,4 +10,34 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media (max-width:425px) {
+    .filter{
+ display: flex;
+ flex-direction: column;
+ 
+    }
+    .heading{
+  margin-left: 3rem;
+  width: 20rem;
+    }
+    
+      }
+@media (max-width:375px) {
+    .filter{
+ display: flex;
+ flex-direction: column;
+ 
+    }
+    
+      }
+ 
+
+@media (max-width:320px) {
+   .filter{
+display: flex;
+flex-direction: column;
+
+   }
+   
+     }
 

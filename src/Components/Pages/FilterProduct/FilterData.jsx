@@ -29,7 +29,7 @@ const FilterData = () => {
         </div>
 
         <Box>
-          <Heading mt={2}>
+          <Heading mt={2} className='heading'>
             <Center>
               Diffrent Types Of Product
 
@@ -39,23 +39,23 @@ const FilterData = () => {
 
         <Box mt={5}>
 
-          <Center gap={2}>
+          <Center gap={2} className='filter'>
 
-            <Button color={"Black"} bgColor={"gray.500"} bg={"yellow.500"} size={"md"} onClick={() => dispatch(getAllData(fData))}>
+            <Button color={"Black"} bgColor={"gray.500"} bg={"yellow.500"} size={"md"} onClick={() => dispatch(getAllData(fData))} className='filter-btn'>
               AllProduct
             </Button>
 
-            <Button onClick={() => dispatch(addMeansClothes(fData))} color={"Black"} size={"md"} bgColor={"gray.500"}>
+            <Button onClick={() => dispatch(addMeansClothes(fData))} color={"Black"} size={"md"} bgColor={"gray.500"} className='filter-btn'>
               Men's clothing
             </Button>
-            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addWomanClothes(fData))}>
+            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addWomanClothes(fData))} className='filter-btn'>
               WomenClothing
             </Button>
-            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addJwelary(fData))} >
+            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addJwelary(fData))} className='filter-btn'>
               Jwelary
             </Button>
 
-            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addElectronic(fData))}>
+            <Button color={"Black"} size={"md"} bgColor={"gray.500"} onClick={() => dispatch(addElectronic(fData))} className='filter-btn'>
               Electronic
             </Button>
 
