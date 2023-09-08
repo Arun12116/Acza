@@ -14,7 +14,7 @@ const Contact = () => {
     return (
         <>
         
-            <Box   w={'100%' } h={'100vh'} backgroundColor={"ButtonShadow"} >
+            <Box  backgroundColor={"ButtonShadow"}  overflow={"hidden"}>
                 <Navbar />
 
                 <Flex justifyContent={'center'} mt={10} >
