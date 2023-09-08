@@ -57,11 +57,11 @@ const Product = () => {
         productData.product === 0 ? <h1>Data lodaing</h1> :
           <div className="product_Container" style={{ padding: "1rem" }}>
 
-            <Flex flexWrap={"wrap"} justifyContent={"space-around"} my={5} >
+            <Flex flexWrap={"wrap"} justifyContent={"space-between"} my={5} >
               {
 
                 productData.product.map((items) => {
-                  return <Card maxW='lg' m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
+                  return <Card width='lg' m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
                     <CardBody>
                       <Image
                         src={items.image}
@@ -72,7 +72,7 @@ const Product = () => {
                       />
                       <Stack mt='6' spacing='3'>
                         <Heading size='md'>{items.category}</Heading>
-                        <Text width={400}>
+                        <Text maxWidth={400}>
                           {items.title}
                         </Text>
                         <Text color='blue.600' fontSize='2xl'>

@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../Navbar/Navbar'
 import { useState } from 'react'
+import "./Contact.css"
 import { Box, FormControl, FormLabel, Input, FormHelperText, FormErrorMessage, Select, Button,  Flex,  } from "@chakra-ui/react"
 
 const Contact = () => {
@@ -12,11 +13,12 @@ const Contact = () => {
 
     return (
         <>
-            <Box width={"100%"} height={"100Vh"} bg={'ButtonFace'}>
+        
+            <div  className='Contact-Container'  >
                 <Navbar />
 
                 <Flex justifyContent={'center'} mt={20} >
-                    <Box width={800} height={550} borderWidth='2px' borderRadius='lg' p={20} boxShadow='md' rounded='md' bg='white' >
+                    <Box width={600} height={550} borderWidth='2px' borderRadius='lg' p={20} boxShadow='md' rounded='md' bg='white' >
 
                         <Flex flexDirection={"column"} gap={10}>
                             <Box>
@@ -59,7 +61,7 @@ const Contact = () => {
 
                     </Box>
                 </Flex>
-            </Box>
+            </div>
 
 
 
