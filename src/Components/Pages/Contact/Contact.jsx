@@ -24,7 +24,7 @@ const Contact = () => {
                             <Box>
                                 <FormControl isInvalid={isError}>
                                     <FormLabel>Email</FormLabel>
-                                    <Input type='email' value={input} onChange={handleInputChange} size={'md'} />
+                                    <Input type='email' value={input} onChange={handleInputChange} size={'sm'} />
                                     {!isError ? (
                                         <FormHelperText>
                                             Enter the email you'd like to receive the newsletter on.
@@ -38,14 +38,14 @@ const Contact = () => {
                             <Box>
                                 <FormControl isRequired>
                                     <FormLabel>First name</FormLabel>
-                                    <Input placeholder='First name' size={'md'} />
+                                    <Input placeholder='First name' size={'sm'} />
                                 </FormControl>
                             </Box>
 
                             <Box>
                                 <FormControl>
                                     <FormLabel>Country</FormLabel>
-                                    <Select placeholder='Select country' size={'md'}>
+                                    <Select placeholder='Select country' size={'sm'}>
                                         <option>United Arab Emirates</option>
                                         <option>Nigeria</option>
                                     </Select>
