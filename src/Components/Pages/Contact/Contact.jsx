@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../Navbar/Navbar'
 import { useState } from 'react'
 import "./Contact.css"
-import { Box, FormControl, FormLabel, Input, FormHelperText, FormErrorMessage, Select, Button,  Flex,  } from "@chakra-ui/react"
+import { Box, FormControl,Center, FormLabel, Input, FormHelperText, FormErrorMessage, Select, Button,  Flex,  } from "@chakra-ui/react"
 
 const Contact = () => {
     const [input, setInput] = useState('')
@@ -53,10 +53,12 @@ const Contact = () => {
                             </Box>
 
 
-
-                            <Box>
-                                <Button  colorScheme='blue'  variant='solid' size={'sm'} >Submit</Button>
-                            </Box>
+<Center>
+<Box>
+<Button  colorScheme='blue'  variant='solid' size={'sm'} >Submit</Button>
+</Box>
+</Center>
+                           
                         </Flex>
 
                     </Box>
