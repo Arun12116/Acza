@@ -17,8 +17,8 @@ const Contact = () => {
             <Box   w={'100%' } h={'100vh'} backgroundColor={"ButtonShadow"} >
                 <Navbar />
 
-                <Flex justifyContent={'center'} mt={20} >
-                    <Box width={600} height={550} borderWidth='2px' borderRadius='lg' p={20} boxShadow='md' rounded='md' bg='white' >
+                <Flex justifyContent={'center'} mt={10} >
+                    <Box width={"lg"} height={"lg"} borderWidth='2px' borderRadius='lg' p={20} boxShadow='md' rounded='md' bg='white' >
 
                         <Flex flexDirection={"column"} gap={10}>
                             <Box>
