@@ -14,17 +14,17 @@ const Contact = () => {
     return (
         <>
         
-            <Box  backgroundColor={"ButtonShadow"}  overflow={"hidden"}>
+            <Box  height={'100vh'} backgroundColor={"ButtonShadow"} >
                 <Navbar />
 
                 <Flex justifyContent={'center'} mt={10} >
-                    <Box width={"lg"} height={"md"} borderWidth='2px' borderRadius='lg' p={20} boxShadow='md' rounded='md' bg='white' >
+                    <Box width={"lg"} height={"md"} borderWidth='2px' borderRadius='lg' p={30} boxShadow='md' rounded='md' bg='white' >
 
                         <Flex flexDirection={"column"} gap={10}>
                             <Box>
                                 <FormControl isInvalid={isError}>
                                     <FormLabel>Email</FormLabel>
-                                    <Input type='email' value={input} onChange={handleInputChange} />
+                                    <Input type='email' value={input} onChange={handleInputChange} size={'md'} />
                                     {!isError ? (
                                         <FormHelperText>
                                             Enter the email you'd like to receive the newsletter on.
@@ -38,14 +38,14 @@ const Contact = () => {
                             <Box>
                                 <FormControl isRequired>
                                     <FormLabel>First name</FormLabel>
-                                    <Input placeholder='First name' />
+                                    <Input placeholder='First name' size={'md'} />
                                 </FormControl>
                             </Box>
 
                             <Box>
                                 <FormControl>
                                     <FormLabel>Country</FormLabel>
-                                    <Select placeholder='Select country'>
+                                    <Select placeholder='Select country' size={'md'}>
                                         <option>United Arab Emirates</option>
                                         <option>Nigeria</option>
                                     </Select>
