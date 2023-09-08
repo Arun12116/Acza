@@ -61,7 +61,7 @@ const Product = () => {
               {
 
                 productData.product.map((items) => {
-                  return <Card width='md' height={"sm"} m={3} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
+                  return <Card width='md' height={"sm"} m={3} boxShadow='dark-lg' p='2' rounded='md' bg='white' >
                     <CardBody>
                       <Image
                         src={items.image}
@@ -70,12 +70,12 @@ const Product = () => {
                         boxSize={90}
 
                       />
-                      <Stack mt='6' spacing='3'>
+                      <Stack mt='2' spacing='3'>
                         <Heading size='sm'>{items.category}</Heading>
-                        <Text maxWidth={400}>
+                        <Text maxWidth={300}>
                           {items.title}
                         </Text>
-                        <Text color='blue.600' fontSize='2xl'>
+                        <Text color='blue.600' fontSize='md'>
                           ${items.price}
                         </Text>
                       </Stack>
