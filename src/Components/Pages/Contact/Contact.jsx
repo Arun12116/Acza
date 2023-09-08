@@ -14,7 +14,7 @@ const Contact = () => {
     return (
         <>
         
-            <div  className='Contact-Container'  >
+            <Box   w={'100%' } h={'100vh'} backgroundColor={"ButtonShadow"} >
                 <Navbar />
 
                 <Flex justifyContent={'center'} mt={20} >
@@ -55,13 +55,13 @@ const Contact = () => {
 
 
                             <Box>
-                                <Button color={'blue'}>Submit</Button>
+                                <Button  colorScheme='blue'  variant='solid' >Submit</Button>
                             </Box>
                         </Flex>
 
                     </Box>
                 </Flex>
-            </div>
+            </Box>
 
 
 
