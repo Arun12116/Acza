@@ -61,17 +61,17 @@ const Product = () => {
               {
 
                 productData.product.map((items) => {
-                  return <Card width='sm' height={"md"} m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
+                  return <Card width='md' height={"md"} m={5} boxShadow='dark-lg' p='6' rounded='md' bg='white' >
                     <CardBody>
                       <Image
                         src={items.image}
                         alt='Green double couch with wooden legs'
                         borderRadius='lg'
-                        boxSize={150}
+                        boxSize={90}
 
                       />
                       <Stack mt='6' spacing='3'>
-                        <Heading size='md'>{items.category}</Heading>
+                        <Heading size='sm'>{items.category}</Heading>
                         <Text maxWidth={400}>
                           {items.title}
                         </Text>
