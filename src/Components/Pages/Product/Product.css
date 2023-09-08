@@ -1,50 +1,71 @@
-
 @media (max-width:425px) {
-  .text{
-   width: 13rem;
-   font-size: 10px;
+  .text {
+    width: 13rem;
+    font-size: 10px;
   }
 
   .spacing {
-   justify-content: center;
-   align-items: center;
- /* display: flex; */
- /* flex-direction: column; */
- gap: 0.25rem;
- font-size: 2px
-   
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.25rem;
+    font-size: 2px
   }
-  .add{
-   width: 80%;
-   font-size: 5px;
-   margin-left: 2rem;
+
+  .add {
+    width: 80%;
+    font-size: 5px;
+    margin-left: 2rem;
   }
- 
- 
-   }
- 
+
+
+}
+
+@media (max-width:375px) {
+  .text {
+    width: 13rem;
+    font-size: 10px;
+  }
+
+  .spacing {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 2px
+  }
+
+  .add {
+    width: 80%;
+    font-size: 5px;
+    margin-left: 2rem;
+  }
+
+
+}
+
 
 @media (max-width:320px) {
- .text{
-  width: 13rem;
-  font-size: 10px;
- }
- .spacing {
-  justify-content: center;
-  align-items: center;
-display: flex;
-flex-direction: column;
-gap: 0.25rem;
-font-size: 2px
-  
- }
- .add{
-  width: 80%;
-  font-size: 5px;
-  margin-left: 2rem;
- }
+  .text {
+    width: 13rem;
+    font-size: 10px;
+  }
 
+  .spacing {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 2px
+  }
 
+  .add {
+    width: 80%;
+    font-size: 5px;
+    margin-left: 2rem;
   }
 
 
+}
