@@ -4,7 +4,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { addTocart, filterDataAction, productAction } from '../../../Redux/CreateAction/Action'
-import {  Heading, Flex, CardFooter, Button, Text, Divider, ButtonGroup, Card, Image, Stack, CardBody } from "@chakra-ui/react"
+import { Heading, Flex, CardFooter, Button, Text, Divider, ButtonGroup, Card, Image, Stack, CardBody } from "@chakra-ui/react"
 import { ToastContainer } from 'react-toastify'
 import { toast } from "react-toastify";
 import "./Product.css"
@@ -61,7 +61,7 @@ const Product = () => {
               {
 
                 productData.product.map((items) => {
-                  return <Card width='sm' height={"sm"} m={3} boxShadow='dark-lg' p='2' rounded='md' bg='white' >
+                  return <Card  width='sm' height={"sm"} m={3} boxShadow='dark-lg' p='2' rounded='md' bg='white' className='card' >
                     <CardBody>
                       <Image
                         src={items.image}
@@ -71,8 +71,8 @@ const Product = () => {
 
                       />
                       <Stack mt='2' spacing='3'>
-                        <Heading size='sm'>{items.category}</Heading>
-                        <Text maxWidth={300}>
+                        <Heading size='sm'>{items.category} </Heading>
+                        <Text maxWidth={300} className='text'>
                           {items.title}
                         </Text>
                         <Text color='blue.600' fontSize='md'>
@@ -82,14 +82,14 @@ const Product = () => {
                     </CardBody>
                     <Divider />
                     <CardFooter>
-                      <ButtonGroup spacing='10'>
-                        <Button  variant='solid' colorScheme='green' onClick={() => addItems(items)} size={"sm"}>
+                      <ButtonGroup spacing='10' className='spacing'>
+                        <Button variant='solid' className='add' colorScheme='green' onClick={() => addItems(items)} size={"sm"}>
                           Add to cart
                         </Button>
-                            <ToastContainer autoClose={200} />
+                        <ToastContainer autoClose={200} />
 
                         <Link to={`/ProductDeatiles/${items.id}`} >
-                          <Button variant='solid' colorScheme='blue'  size={"sm"}>
+                          <Button variant='solid' colorScheme='blue' size={"sm"}>
                             View More
                           </Button>
                         </Link>

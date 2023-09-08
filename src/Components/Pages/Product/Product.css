@@ -1,168 +1,50 @@
 
-
-
-
-
-
-
-
-
-/* .btn {
-  display: flex;
-} */
-/* 
-@media (max-width:1440px) {
-  .image {
-    width: 35%;
-    height: 70%;
-  }
-
-  .card {
-    width: 80vw;
-    height: 60vh;
-    padding: 2rem;
-    margin-top: 0;
-
-  }
-  .btn Button{
-    width:15vw;
-    height:6vh;
-    font-size: 25px;
-  }
-  .title {
-    width: 20rem;
-    
-
-  }
-}
-
-
-
-
-
-@media (max-width:1024px) {
-  .image {
-    width: 30%;
-    height: 60%;
-  }
-
-  .card {
-    width: 70vw;
-    height: 50vh;
-    padding: 2rem;
-    margin-top: 0;
-
-  }
-  .btn Button{
-    width:15vw;
-    height:5vh;
-    font-size: 20px;
-  }
-  .title {
-    width: 10rem;
-
-  }
-}
-
- */
-
-/* 
-@media (max-width:768px) {
-  .image {
-    width: 45%;
-    height: 75%;
-  }
-
-  .card {
-    width: 80vw;
-    height: 70vh;
-    padding: 2rem;
-
-  }
-
-  .title {
-    width: 18rem;
-
-  }
-}
-
 @media (max-width:425px) {
-  .image {
-    width: 25%;
-    height: 32%;
+  .text{
+   width: 13rem;
+   font-size: 10px;
   }
 
-  .card {
-    width: 90vw;
-    height: 80vh;
-    margin-top: 0;
-
+  .spacing {
+   justify-content: center;
+   align-items: center;
+ /* display: flex; */
+ /* flex-direction: column; */
+ gap: 0.25rem;
+ font-size: 2px
+   
   }
-  .btn Button{
-    width:20vw;
-    height:5vh;
-    font-size: 9px;
+  .add{
+   width: 80%;
+   font-size: 5px;
+   margin-left: 2rem;
   }
-
-  .title {
-    width: 18rem;
-
-  }
-}
-@media (max-width:375px) {
-  .image {
-    width: 25%;
-    height: 30%;
-    margin-top: 0;
-  }
-
-  .card {
-    width: 90vw;
-    height: 70vh;
-
-  }
-  .btn Button{
-    width:20vw;
-    height:5vh;
-    font-size: 9px;
-  }
-
-  .title {
-    width: 15rem;
-
-  }
-}
+ 
+ 
+   }
+ 
 
 @media (max-width:320px) {
-  .image {
-    width: 15%;
-    height: 30%;
-    margin-top: 0px;
-  }
+ .text{
+  width: 13rem;
+  font-size: 10px;
+ }
+ .spacing {
+  justify-content: center;
+  align-items: center;
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+font-size: 2px
+  
+ }
+ .add{
+  width: 80%;
+  font-size: 5px;
+  margin-left: 2rem;
+ }
 
-  .card {
-    width: 90vw;
-    height: 65vh;
-    
-
-    
-  }
-  .btn Button{
-    width:20vw;
-    height:5vh;
-    font-size: 9px;
-  }
-
-  .title {
-    width: 12rem;
-    
 
   }
-
-
-
-} */
-
-
 
 
