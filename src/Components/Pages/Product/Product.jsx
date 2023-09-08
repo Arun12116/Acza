@@ -83,13 +83,13 @@ const Product = () => {
                     <Divider />
                     <CardFooter>
                       <ButtonGroup spacing='10'>
-                        <Button  variant='solid' colorScheme='green' onClick={() => addItems(items)}>
+                        <Button  variant='solid' colorScheme='green' onClick={() => addItems(items)} size={"sm"}>
                           Add to cart
                         </Button>
                             <ToastContainer autoClose={200} />
 
                         <Link to={`/ProductDeatiles/${items.id}`} >
-                          <Button variant='solid' colorScheme='blue'>
+                          <Button variant='solid' colorScheme='blue'  size={"sm"}>
                             View More
                           </Button>
                         </Link>
