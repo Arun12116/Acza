@@ -3,10 +3,9 @@ import "./Navbar.css"
 import { GiHamburgerMenu } from "react-icons/gi"
 import { BsCartDash } from "react-icons/bs"
 import { Button} from "@chakra-ui/react"
-
-
 import { Link, NavLink } from "react-router-dom"
 import { useSelector } from "react-redux"
+
 
 const Navbar = () => {
 
@@ -64,11 +63,13 @@ const Navbar = () => {
                             </Link>
 
                         </div>
+                       
 
                         <div className="hamburger">
 
                             {<GiHamburgerMenu />}
                         </div>
+
 
 
                     </div>
