@@ -6,6 +6,21 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   
+
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.stack{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+
 }
 @media (max-width:425px) {
   .text {

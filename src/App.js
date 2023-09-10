@@ -23,15 +23,10 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/ProductDeatiles/:id" element={<ProductDeatiles />} />
         <Route path="/Cart" element={<Protected  Components={Cart} />} />
-        <Route path="/Product" element={<Protected  Components={Product} />} />
-
+        <Route path="/allProduct" element={<Protected Components={Product} />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Sinup" element={<Sinup/>} />
         <Route path="/*" element={<Page404 />} />
-
-
-
-
 
       </Routes>
 

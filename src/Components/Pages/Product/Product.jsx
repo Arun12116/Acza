@@ -55,9 +55,9 @@ const Product = () => {
 
       {
         productData.product === 0 ? <h1>Data lodaing</h1> :
-          <div className="product_Container" style={{ padding: "1rem" }}>
+          <div className="product_Container" style={{ padding: "1rem" }} id='allProduct'>
 
-            <Flex flexWrap={"wrap"} className='flex' justifyContent={"space-around"} my={5} >
+            <Flex flexWrap={"wrap"}  justifyContent={"space-around"} my={5} >
               {
 
                 productData.product.map((items) => {
@@ -70,9 +70,9 @@ const Product = () => {
                         boxSize={90}
 
                       />
-                      <Stack mt='2' spacing='3'>
+                      <Stack mt='2' spacing='3' className='stack'>
                         <Heading size='sm'>{items.category} </Heading>
-                        <Text maxWidth={300} className='text'>
+                        <Text maxWidth={400} className='text'>
                           {items.title}
                         </Text>
                         <Text color='blue.600' fontSize='md'>
